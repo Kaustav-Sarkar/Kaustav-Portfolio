@@ -1,0 +1,133 @@
+{
+  "data": [
+    {
+      "id": "kaustav-portfolio",
+      "name": "Kaustav-Portfolio",
+      "createdAt": "2024-01-01T00:00:00Z",
+      "url": "https://github.com/Kaustav-Sarkar/Kaustav-Portfolio",
+      "deploymentUrl": "https://kaustav-sarkar.com",
+      "description": "🚀 My personal portfolio built with React.js. Features responsive design, dynamic theming, and modular architecture for easy customization.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
+      ]
+    },
+    {
+      "id": "kaustav-video-chat",
+      "name": "Video-Chat",
+      "createdAt": "2021-06-15T00:00:00Z",
+      "url": "https://github.com/Kaustav-Sarkar/Video-Chat",
+      "deploymentUrl": "https://kaustav-sarkar-video-call.netlify.app/",
+      "description": "📹 Real-time video chat application built with React.js, WebRTC, and Socket.io. Enables high-quality video calls with unique ID-based authentication and responsive design across devices.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
+        },
+        {
+          "name": "Node.js",
+          "iconifyClass": "logos-nodejs"
+        }
+      ]
+    },
+    {
+      "id": "kaustav-movie-recommendation",
+      "name": "Movie-Recommendation",
+      "createdAt": "2022-01-20T00:00:00Z",
+      "url": "https://github.com/Kaustav-Sarkar/Movie-Recommendation",
+      "deploymentUrl": "https://kaustav-sarkar-movie-recommendation-app-u5l4ly.streamlit.app/",
+      "description": "🎬 Movie recommendation system using cosine similarity to offer personalized movie suggestions. Analyzes similarity between movies based on features like genre, actors, and ratings.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Streamlit",
+          "iconifyClass": "simple-icons:streamlit"
+        }
+      ]
+    },
+    {
+      "id": "kaustav-audio-classification",
+      "name": "AudioClassification",
+      "createdAt": "2022-05-10T00:00:00Z",
+      "url": "https://github.com/Kaustav-Sarkar/AudioClassification",
+      "description": "🔊 Audio classification application using MFCC to convert audio files into images for efficient analysis. Implements transfer learning with Xception model for accurate audio data classification.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Keras",
+          "iconifyClass": "simple-icons:keras"
+        },
+        {
+          "name": "TensorFlow",
+          "iconifyClass": "logos-tensorflow"
+        }
+      ]
+    },
+    {
+      "id": "kaustav-sentiment-analysis",
+      "name": "Sentiment-Analysis-App",
+      "createdAt": "2021-09-20T00:00:00Z",
+      "description": "😊 Crowd mood detection app using image classification to generate emotional insights. Real-time sentiment analysis using OpenCV and Flask, improving engagement by 25%.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Flask",
+          "iconifyClass": "simple-icons:flask"
+        },
+        {
+          "name": "OpenCV",
+          "iconifyClass": "simple-icons:opencv"
+        }
+      ]
+    },
+    {
+      "id": "kaustav-valet-parking",
+      "name": "Automatic-Valet-Parking",
+      "createdAt": "2022-11-15T00:00:00Z",
+      "description": "🚗 Perception system combining sensor fusion, inverse perspective mapping, and deep learning to automate parking spot detection. Implemented using YOLOv2, FCN32, and PCL for accurate object detection.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "C++",
+          "iconifyClass": "logos-c-plusplus"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "YOLO",
+          "iconifyClass": "simple-icons:yolo"
+        }
+      ]
+    }
+  ]
+}

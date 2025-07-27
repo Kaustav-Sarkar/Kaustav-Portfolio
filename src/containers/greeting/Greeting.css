@@ -1,0 +1,136 @@
+.main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 4rem;
+}
+
+.greet-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+
+.gretting-main {
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+}
+
+.greeting-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.greeting-main > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.greeting-text-div {
+  flex: 1;
+}
+
+.greeting-image-div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-greeting-div {
+  display: flex;
+  margin-top: 20px;
+}
+
+.greeting-text {
+  margin-top: 80px;
+  font-size: var(--font-hero-title);
+  line-height: 1.1;
+  font-family: var(--font-google-sans-bold);
+}
+
+.greeting-nickname {
+  font-size: var(--font-hero-subtitle);
+  line-height: 0px;
+  font-family: var(--font-google-sans-bold-italic);
+}
+
+.greeting-text-p {
+  font-size: var(--font-hero-description);
+  line-height: 40px;
+  margin-right: 40px;
+  font-family: var(--font-google-sans-medium);
+}
+
+.greeting-image-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.greeting-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.1);
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.greeting-image:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .greeting-text {
+  }
+
+  .greeting-text-p {
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting-image-div {
+    display: none;
+  }
+
+  .button-greeting-div {
+    justify-content: space-around;
+  }
+
+  .greeting-text {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .greeting-nickname {
+    text-align: center;
+  }
+
+  .greeting-text-p {
+    margin-right: 0px;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .greeting-main {
+    display: block;
+  }
+
+  .portfolio-repo-btn-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

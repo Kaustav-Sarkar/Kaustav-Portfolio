@@ -1,0 +1,61 @@
+.splash-container {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.splash-container .ks-logo {
+  animation: splash-animation 3s cubic-bezier(0.65, 0, 0.35, 1) both;
+  width: 50vmin;
+  height: 50vmin;
+  max-width: 600px;
+  max-height: 600px;
+  min-width: 150px;
+  min-height: 150px;
+  shape-rendering: geometricPrecision;
+}
+
+@keyframes splash-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    filter: drop-shadow(0 0 1px rgba(90, 199, 218, 0.2));
+  }
+
+  25% {
+    transform: scale(0.3);
+    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(90, 199, 218, 0.5));
+  }
+
+  60% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(90, 199, 218, 0.8)) drop-shadow(0 0 10px rgba(90, 199, 218, 0.3));
+  }
+
+  75% {
+    transform: scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 2px rgba(90, 199, 218, 0.5));
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+    filter: drop-shadow(0 0 1px rgba(90, 199, 218, 0.2));
+  }
+}
+
+/* Force font loading during splash screen */
+.splash-container::before {
+  content: "Loading";
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  font-family: 'Google Sans Regular', 'Google Sans Bold', 'Montserrat';
+  font-weight: 400, 700;
+}

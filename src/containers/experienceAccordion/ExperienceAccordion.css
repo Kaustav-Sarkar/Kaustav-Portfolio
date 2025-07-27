@@ -1,0 +1,51 @@
+.experience-accord {
+  margin: 50px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accord-panel {
+  font-family: "Google Sans Regular";
+  position: relative;
+  overflow: visible;
+}
+
+.experience-accord [data-baseweb="accordion"] {
+  border: none;
+}
+
+.experience-accord [data-baseweb="panel-container"] {
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: visible;
+}
+
+.experience-accord [data-baseweb="chevron"] {
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-accord [aria-expanded="true"] {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.experience-accord [data-baseweb="header"]:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .experience-accord {
+    margin: 20px;
+  }
+
+  .experience-accord [data-baseweb="header"] {
+    padding: 15px 20px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .experience-accord {
+    margin: 10px;
+  }
+}

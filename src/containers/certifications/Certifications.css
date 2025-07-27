@@ -1,0 +1,66 @@
+/* Mobile-first approach for certificates container */
+.certs-header {
+  font-size: 30px;
+  line-height: 1.1;
+  font-family: "Google Sans Regular";
+  text-align: center;
+}
+
+.certs-body-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  align-items: start;
+  justify-items: center;
+}
+
+/* Make all certificate cards full width within their grid cell */
+.certs-body-div>div {
+  width: 100%;
+  max-width: 400px;
+  /* Prevent cards from getting too wide on mobile */
+}
+
+/* Tablet styles - 576px to 1024px */
+@media (min-width: 576px) {
+  .certs-header {
+    font-size: 35px;
+  }
+
+  .certs-body-div {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .certs-body-div>div {
+    max-width: none;
+    /* Remove max-width constraint on larger screens */
+  }
+}
+
+/* Desktop styles - > 1024px */
+@media (min-width: 1025px) {
+  .certs-header {
+    font-size: 40px;
+  }
+
+  .certs-body-div {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Large desktop - > 1440px */
+@media (min-width: 1440px) {
+  .certs-body-div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .certs-body-div {
+    gap: 15px;
+    padding: 15px 0;
+  }
+}

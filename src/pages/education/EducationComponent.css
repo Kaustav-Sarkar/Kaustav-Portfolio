@@ -1,0 +1,77 @@
+.education-main {
+  width: 100%;
+}
+
+.basic-education {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.heading-div {
+  display: flex;
+}
+
+.heading-div > * {
+  flex: 1;
+}
+
+.heading-img-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-text-div {
+  text-align: center;
+}
+
+.heading-img-div > * {
+  max-width: 100%;
+  height: auto;
+}
+
+.heading-text {
+  font-size: var(--font-page-heading);
+  font-weight: 400;
+  font-family: var(--font-google-sans-bold);
+  line-height: 1.1;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.heading-sub-text {
+  font-size: var(--font-page-subtitle);
+  font-family: var(--font-google-sans-regular);
+  text-align: center;
+}
+
+.heading-detail-text {
+  font-size: var(--font-page-long-description);
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: var(--font-google-sans-medium);
+  text-align: center;
+}
+
+@media (max-width: 1380px) {
+  .heading-text {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-text {
+    margin-top: 20px;
+  }
+
+  .heading-div {
+    flex-direction: column;
+  }
+
+  .heading-detail-text {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}

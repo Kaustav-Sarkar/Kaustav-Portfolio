@@ -1,0 +1,11 @@
+.fade-wrapper {
+  opacity: 0;
+  transform: var(--fade-transform, none);
+  transition: opacity var(--fade-duration, 1000ms) ease-out,
+    transform var(--fade-duration, 1000ms) ease-out;
+}
+
+.fade-wrapper.fade-visible {
+  opacity: 1;
+  transform: none;
+}

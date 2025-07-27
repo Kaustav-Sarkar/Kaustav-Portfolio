@@ -1,0 +1,57 @@
+#topButton {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.5rem;
+  cursor: pointer;
+  padding: 12px;
+  outline: none;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#topButton.visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#topButton.visible:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 768px) {
+  #topButton {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(80px) scale(0.8);
+  }
+
+  #topButton.visible {
+    transform: translateY(0) scale(1);
+  }
+
+  #topButton #arrow {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,358 @@
+/* Mobile-first certificate card styles */
+.cert-card {
+  width: 100%;
+  min-height: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 8px rgba(107, 33, 168, 0.15),
+    0px 1px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 1px rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Simplified hover for desktop only */
+@media (hover: hover) {
+  .cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 24px rgba(107, 33, 168, 0.2),
+      0px 4px 12px rgba(107, 33, 168, 0.12),
+      0px 2px 8px rgba(0, 0, 0, 0.08),
+      inset 0px 1px 2px rgba(255, 255, 255, 0.08);
+    z-index: 10;
+  }
+}
+
+/* Glowing border effect - desktop only */
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+      rgba(107, 33, 168, 0.3),
+      rgba(255, 255, 255, 0.1),
+      rgba(107, 33, 168, 0.3));
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+  .cert-card:hover::before {
+    opacity: 0.24;
+  }
+}
+
+.cert-header {
+  margin: 0px;
+  border-radius: 14px 14px 0px 0px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo_img {
+  margin: auto;
+  width: auto;
+  height: 80px;
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+/* For iconify logos */
+.cert-header .iconify.logo_img {
+  display: block;
+  margin: auto;
+  color: white;
+  font-size: 80px !important;
+  height: 80px !important;
+}
+
+.cert-body {
+  margin: 0px;
+  padding: 20px;
+  min-height: 130px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.cert-body-title {
+  font-family: "Google Sans Regular";
+  font-size: 16px;
+  margin: 5px 0;
+  line-height: 1.4;
+  width: 100%;
+  text-align: left;
+  /* No line clamping on mobile - show full content */
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+}
+
+.cert-body-subtitle {
+  font-family: "Google Sans Regular";
+  font-size: 14px;
+  color: #808080;
+  margin: 5px 0;
+  line-height: 1.4;
+  width: 100%;
+  text-align: left;
+  /* No line clamping on mobile - show full content */
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.content .content-overlay {
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.6) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Hover effects only on devices that support hover */
+@media (hover: hover) {
+  .content:hover .content-overlay {
+    opacity: 1;
+  }
+}
+
+.content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+@media (hover: hover) {
+  .content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
+.content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  font-family: "Google Sans Regular";
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+/* Tablet styles */
+@media (min-width: 576px) {
+  .cert-card {
+    min-height: 320px;
+  }
+
+  .cert-header {
+    height: 160px;
+  }
+
+  .logo_img {
+    height: 90px;
+  }
+
+  .cert-header .iconify.logo_img {
+    font-size: 90px !important;
+    height: 90px !important;
+  }
+
+  .cert-body {
+    min-height: 160px;
+  }
+
+  .cert-body-title {
+    font-size: 17px;
+    /* Add line clamping for larger screens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .cert-body-subtitle {
+    font-size: 14px;
+    /* Add line clamping for larger screens */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .content {
+    height: 160px;
+  }
+}
+
+/* Desktop styles - removed fixed height */
+@media (min-width: 1025px) {
+  .cert-card {
+    min-height: 300px;
+    /* Removed fixed height to allow cards to grow */
+  }
+
+  .cert-header {
+    height: 150px;
+  }
+
+  .cert-body {
+    min-height: 150px;
+    padding: 15px 20px;
+    /* Removed fixed height */
+  }
+
+  .logo_img {
+    height: 100px;
+  }
+
+  .cert-header .iconify.logo_img {
+    font-size: 100px !important;
+    height: 100px !important;
+  }
+
+  .cert-body-title {
+    font-size: 17px;
+  }
+
+  .cert-body-subtitle {
+    font-size: 14px;
+  }
+
+  .content {
+    height: 150px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .cert-body-title {
+    font-size: 18px;
+  }
+
+  .cert-body-subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Remove the fade wrapper styling - grid handles layout */
+.certs-body-div>div {
+  width: 100%;
+  display: block;
+  margin: 0;
+  vertical-align: top;
+}
+
+@media (max-width: 575px) {
+  .cert-card {
+    min-height: 200px;
+  }
+
+  .cert-header {
+    height: 100px;
+  }
+
+  .logo_img {
+    height: 50px;
+  }
+
+  .cert-header .iconify.logo_img {
+    font-size: 50px !important;
+    height: 50px !important;
+  }
+
+  .cert-body {
+    min-height: 100px;
+    padding: 12px 16px;
+  }
+
+  .cert-body-title {
+    font-size: 14px;
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  .cert-body-subtitle {
+    font-size: 12px;
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  .content {
+    height: 100px;
+  }
+}
