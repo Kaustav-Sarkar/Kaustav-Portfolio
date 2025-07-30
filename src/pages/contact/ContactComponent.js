@@ -27,7 +27,7 @@ class Contact extends Component {
           <meta name="description" content="Contact Kaustav Sarkar for backend engineering opportunities, collaborations, or technical discussions. Connect via LinkedIn, GitHub, email, or the contact form." />
           <meta property="og:title" content="Contact - Kaustav Sarkar" />
           <meta property="og:description" content="Get in touch with Kaustav Sarkar for backend engineering opportunities and collaborations." />
-          <link rel="canonical" href="https://kaustav-sarkar.com/contact" />
+          <link rel="canonical" href="https://kaustavsarkar.dev/contact" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -36,7 +36,7 @@ class Contact extends Component {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kaustav-sarkar.com/"
+                "item": "https://kaustavsarkar.dev/"
               }, {
                 "@type": "ListItem",
                 "position": 2,

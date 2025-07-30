@@ -34,7 +34,7 @@ class Experience extends Component {
           <meta name="description" content="Explore Kaustav Sarkar's professional experience as a Senior Backend Engineer at Cloudera and previous roles. Specializing in Java, Go, Kubernetes, and distributed systems." />
           <meta property="og:title" content="Professional Experience - Kaustav Sarkar" />
           <meta property="og:description" content="Senior Backend Engineer at Cloudera with expertise in cloud infrastructure and distributed systems." />
-          <link rel="canonical" href="https://kaustav-sarkar.com/experience" />
+          <link rel="canonical" href="https://kaustavsarkar.dev/experience" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -43,7 +43,7 @@ class Experience extends Component {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kaustav-sarkar.com/"
+                "item": "https://kaustavsarkar.dev/"
               }, {
                 "@type": "ListItem",
                 "position": 2,

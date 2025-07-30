@@ -23,7 +23,7 @@ class Projects extends Component {
           <meta name="description" content="Explore Kaustav Sarkar's technical projects including Video Chat applications, Movie Recommendation systems, Audio Classification, and more. Built with Java, Go, Python, and modern technologies." />
           <meta property="og:title" content="Technical Projects - Kaustav Sarkar" />
           <meta property="og:description" content="Portfolio of backend and full-stack projects showcasing expertise in distributed systems, machine learning, and scalable applications." />
-          <link rel="canonical" href="https://kaustav-sarkar.com/projects" />
+          <link rel="canonical" href="https://kaustavsarkar.dev/projects" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -32,7 +32,7 @@ class Projects extends Component {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kaustav-sarkar.com/"
+                "item": "https://kaustavsarkar.dev/"
               }, {
                 "@type": "ListItem",
                 "position": 2,
@@ -71,11 +71,11 @@ class Projects extends Component {
             </div>
           </Fade>
         </div>
-        
+
         {featureFlags.sections.flagshipProjects && (
           <FlagshipProject theme={theme} />
         )}
-        
+
         <div className="repo-cards-div-main">
           {projects.data.map((repo) => {
             return <GithubRepoCard repo={repo} theme={theme} key={repo.id} />;

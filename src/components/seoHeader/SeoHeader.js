@@ -83,7 +83,7 @@ function SeoHeader() {
       "@type": "EducationalOrganization",
       name: "Manipal Institute of Technology"
     },
-    image: "https://kaustav-sarkar.com/images/kaustav.jpeg"
+    image: "https://kaustavsarkar.dev/images/kaustav.jpeg"
   };
 
   const websiteData = {

@@ -12,7 +12,7 @@ const seo = {
   og: {
     title: "Kaustav Sarkar Portfolio",
     type: "website",
-    url: "https://kaustav-sarkar.com",
+    url: "https://kaustavsarkar.dev",
   },
 };
 
@@ -701,7 +701,7 @@ const flagshipProjects = {
       projectName: "Personal Portfolio",
       projectDesc: "A modern, responsive portfolio website built with React featuring dynamic theming, feature flags, and seamless user experience",
       image: "kaustav-logo.svg",
-      link: "https://kaustav-sarkar.com",
+      link: "https://kaustavsarkar.dev",
     },
   ],
 };

@@ -21,7 +21,7 @@ class EducationComponent extends Component {
           <meta name="description" content="Kaustav Sarkar's educational background from Manipal Institute of Technology and professional certifications in cloud computing, distributed systems, and software engineering." />
           <meta property="og:title" content="Education & Certifications - Kaustav Sarkar" />
           <meta property="og:description" content="B.Tech in Computer Science from Manipal Institute of Technology with certifications in modern backend technologies." />
-          <link rel="canonical" href="https://kaustav-sarkar.com/education" />
+          <link rel="canonical" href="https://kaustavsarkar.dev/education" />
           <script type="application/ld+json">
             {JSON.stringify({
               "@context": "https://schema.org",
@@ -30,7 +30,7 @@ class EducationComponent extends Component {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://kaustav-sarkar.com/"
+                "item": "https://kaustavsarkar.dev/"
               }, {
                 "@type": "ListItem",
                 "position": 2,

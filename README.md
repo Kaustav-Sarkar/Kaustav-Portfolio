@@ -1,6 +1,6 @@
 <div align="center">
   
-  # Kaustav's Portfolio
+# Kaustav's Portfolio
   
   [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
   [![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
@@ -8,7 +8,7 @@
   
   <h3>A modern developer portfolio with 3D animations and feature flags</h3>
   
-  **[View Live Demo →](https://kaustav-sarkar.com)**
+  **[View Live Demo →](https://kaustavsarkar.dev)**
   
 </div>
 
@@ -45,7 +45,9 @@ npm start
 ## Customization
 
 ### Personal Information
+
 Update your details in `src/portfolio.js`:
+
 ```javascript
 const greeting = {
   title: "Your Name",
@@ -56,7 +58,9 @@ const greeting = {
 ```
 
 ### Feature Flags
+
 Control visible sections in `src/featureFlags.js`:
+
 ```javascript
 const featureFlags = {
   sections: {
@@ -72,6 +76,7 @@ const featureFlags = {
 Disabled sections show a "Work in Progress" page, keeping the code ready for future use.
 
 ### Theme
+
 Customize colors in `src/theme.js`.
 
 ## Project Structure
