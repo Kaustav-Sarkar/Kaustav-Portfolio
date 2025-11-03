@@ -14,11 +14,7 @@ if (isDesktop) {
         useGLTF.preload("/planet/scene.gltf");
     };
 
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(idlePreload, { timeout: 10000 });
-    } else {
-        setTimeout(idlePreload, 5000);
-    }
+    setTimeout(idlePreload, 7000);
 }
 
 const root = createRoot(document.getElementById("root"));

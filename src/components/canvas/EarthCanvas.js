@@ -26,7 +26,7 @@ const EarthCanvas = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setPhase("loading");
-    }, 100);
+    }, 7000);
 
     return () => clearTimeout(timer);
   }, []);
