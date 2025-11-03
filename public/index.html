@@ -140,11 +140,66 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <!-- Lazy load Iconify only when icon elements are present -->
+  <script>
+    (function () {
+      var iconifyLoaded = false;
 
+      function loadIconify() {
+        if (iconifyLoaded || window.Iconify) return;
+        iconifyLoaded = true;
+
+        var script = document.createElement('script');
+        script.src = 'https://code.iconify.design/1/1.0.4/iconify.min.js';
+        script.defer = true;
+        document.head.appendChild(script);
+      }
+
+      function checkForIcons() {
+        if (document.querySelector('[data-icon]')) {
+          loadIconify();
+          return true;
+        }
+        return false;
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+          if (checkForIcons()) return;
+
+          var observer = new MutationObserver(function (mutations) {
+            for (var i = 0; i < mutations.length; i++) {
+              var mutation = mutations[i];
+              if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                for (var j = 0; j < mutation.addedNodes.length; j++) {
+                  var node = mutation.addedNodes[j];
+                  if (node.nodeType === 1) {
+                    if (node.hasAttribute && node.hasAttribute('data-icon')) {
+                      loadIconify();
+                      observer.disconnect();
+                      return;
+                    }
+                    if (node.querySelector && node.querySelector('[data-icon]')) {
+                      loadIconify();
+                      observer.disconnect();
+                      return;
+                    }
+                  }
+                }
+              }
+            }
+          });
+
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+      } else {
+        checkForIcons();
+      }
+    })();
+  </script>
 
 </head>
 

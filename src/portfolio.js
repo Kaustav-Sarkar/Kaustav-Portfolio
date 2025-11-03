@@ -21,7 +21,7 @@ const greeting = {
   title: "Kaustav Sarkar",
   logo_name: "KaustavSarkar",
   nickname: "tech_whiz",
-  subTitle: "I build scalable, business-aware systems that power modern companies, focusing on technology that drives product success and enables engineering teams. Privacy and security aren't afterthoughts—they're fundamental principles I embed in every solution I create. Fueled by a passion for continuous learning and resilience, I thrive on tackling complex challenges and improving every day",
+  subTitle: "I build scalable, business-aware systems that power modern companies, focusing on technology that drives product success and enables engineering teams. Privacy and security aren't afterthoughts, they're fundamental principles I embed in every solution I create. Fueled by a passion for continuous learning and resilience, I thrive on tackling complex challenges and improving every day",
   resumeLink:
     "https://drive.google.com/file/d/118v_F2dGxCBBaVTkVCobgLK4KyTFqQ7-/view?usp=sharing",
   portfolio_repository: "https://github.com/Kaustav-Sarkar/Kaustav-Portfolio",
