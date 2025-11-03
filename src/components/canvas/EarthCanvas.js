@@ -19,8 +19,6 @@ const Earth = ({ onLoaded }) => {
   );
 };
 
-useGLTF.preload("/planet/scene.gltf");
-
 const EarthCanvas = () => {
   const [phase, setPhase] = useState("initializing");
   const canvasRef = useRef();

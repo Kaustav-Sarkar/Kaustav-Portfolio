@@ -5,7 +5,21 @@ import App from "./App";
 import "./global.js";
 import { useGLTF } from "@react-three/drei";
 
-useGLTF.preload("/planet/scene.gltf");
+const isDesktop = window.innerWidth >= 1024;
+
+if (isDesktop) {
+    useGLTF.preload("/planet/scene.gltf");
+} else {
+    const idlePreload = () => {
+        useGLTF.preload("/planet/scene.gltf");
+    };
+
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(idlePreload, { timeout: 10000 });
+    } else {
+        setTimeout(idlePreload, 5000);
+    }
+}
 
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);

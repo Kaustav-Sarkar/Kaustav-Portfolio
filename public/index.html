@@ -5,6 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- CRITICAL FONT PRELOADING - Load fonts before CSS/JS -->
+  <link rel="preload" href="/fonts/Agustina.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/GoogleSans-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/GoogleSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/GoogleSans-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
   <!-- PRIMARY SEO TAGS -->
   <title>Kaustav Sarkar - Senior Backend Engineer | Java, Go, Kubernetes Expert</title>
   <meta name="description"
@@ -34,8 +40,67 @@
   <!-- CANONICAL URL -->
   <link rel="canonical" href="https://kaustavsarkar.dev/" />
 
-  <!-- PREVENT WHITE FLASH - Dark background matching splash screen -->
+  <!-- CRITICAL FONT FACES - Inline to match preload URLs -->
   <style>
+    @font-face {
+      font-family: "Agustina Regular";
+      font-style: normal;
+      font-weight: normal;
+      src: local("Agustina Regular"),
+        url('/fonts/Agustina.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Bold";
+      src: local("Google Sans Bold"),
+        url('/fonts/GoogleSans-Bold.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Bold Italic";
+      src: local("Google Sans Bold Italic"),
+        url('/fonts/GoogleSans-BoldItalic.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Medium";
+      src: local("Google Sans Medium"),
+        url('/fonts/GoogleSans-Medium.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Medium Italic";
+      src: local("Google Sans Medium Italic"),
+        url('/fonts/GoogleSans-MediumItalic.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Italic";
+      src: local("Google Sans Italic"),
+        url('/fonts/GoogleSans-Italic.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Google Sans Regular";
+      src: local("Google Sans Regular"),
+        url('/fonts/GoogleSans-Regular.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Montserrat";
+      src: local("Montserrat"),
+        url('/fonts/Montserrat-Regular.woff2') format("woff2");
+      font-display: swap;
+    }
+
+    /* PREVENT WHITE FLASH - Dark background matching splash screen */
     html,
     body {
       background-color: #0f0f0f;
@@ -43,17 +108,12 @@
       padding: 0;
     }
 
-    /* Ensure root element also has dark background while React loads */
     #root:empty {
       position: fixed;
       inset: 0;
       background-color: #0f0f0f;
     }
   </style>
-
-  <!-- Prefetch profile images for contact page -->
-  <link rel="preload" as="image" href="/images/kaustav.webp" type="image/webp">
-  <link rel="preload" as="image" href="/images/kaustav.jpeg" type="image/jpeg">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">

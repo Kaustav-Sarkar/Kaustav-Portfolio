@@ -40,11 +40,18 @@ export default function Greeting(props) {
             </div>
           </div>
           <div className="greeting-image-div">
-            <img
-              alt="Kaustav Sarkar's developer workspace with multiple monitors and coding setup"
-              src="/images/home_setup2.png"
-              className="greeting-image"
-            />
+            <picture>
+              <source
+                media="(min-width: 769px)"
+                srcSet="/images/home_setup2.webp"
+                type="image/webp"
+              />
+              <img
+                alt="Kaustav Sarkar's developer workspace with multiple monitors and coding setup"
+                className="greeting-image"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              />
+            </picture>
           </div>
         </div>
       </div>
