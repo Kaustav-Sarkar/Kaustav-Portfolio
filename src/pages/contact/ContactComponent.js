@@ -60,17 +60,17 @@ class Contact extends Component {
             <div className="contact-heading-img-div">
               <picture>
                 <source
-                  srcSet="/images/kaustav.webp"
+                  srcSet="/images/kaustav300.webp 300w,
+                          /images/kaustav600.webp 600w,
+                          /images/kaustav900.webp 900w"
+                  sizes="(max-width: 768px) 200px, 300px"
                   type="image/webp"
-                />
-                <source
-                  srcSet="/images/kaustav.jpeg"
-                  type="image/jpeg"
                 />
                 <img
                   src="/images/kaustav.jpeg"
                   alt="Kaustav Sarkar - Senior Backend Engineer"
                   loading="eager"
+                  fetchpriority="high"
                   width="300"
                   height="300"
                   decoding="async"
