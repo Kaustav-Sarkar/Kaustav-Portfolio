@@ -24,11 +24,17 @@ const EarthCanvas = () => {
   const canvasRef = useRef();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const startRendering = () => {
       setPhase("loading");
-    }, 7000);
+    };
 
-    return () => clearTimeout(timer);
+    if (window.requestIdleCallback) {
+      const idleCallbackId = window.requestIdleCallback(startRendering, { timeout: 200 });
+      return () => window.cancelIdleCallback(idleCallbackId);
+    } else {
+      const timer = setTimeout(startRendering, 100);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleCanvasCreated = (state) => {

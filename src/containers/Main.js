@@ -4,14 +4,14 @@ import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import WorkInProgress from "../pages/workInProgress/WorkInProgress";
 import featureFlags from "../featureFlags";
-import Home from "../pages/home/HomeComponent";
-import Education from "../pages/education/EducationComponent";
-import Experience from "../pages/experience/Experience";
-import Contact from "../pages/contact/ContactComponent";
-import Projects from "../pages/projects/Projects";
-import BlogComponent from "../pages/blogs/BlogComponent";
 
 const Splash = React.lazy(() => import("../pages/splash/Splash"));
+const Home = React.lazy(() => import("../pages/home/HomeComponent"));
+const Education = React.lazy(() => import("../pages/education/EducationComponent"));
+const Experience = React.lazy(() => import("../pages/experience/Experience"));
+const Contact = React.lazy(() => import("../pages/contact/ContactComponent"));
+const Projects = React.lazy(() => import("../pages/projects/Projects"));
+const BlogComponent = React.lazy(() => import("../pages/blogs/BlogComponent"));
 
 export default function Main(props) {
   const { theme, onToggle } = props;
@@ -26,16 +26,34 @@ export default function Main(props) {
                 <Splash theme={theme} />
               </Suspense>
             ) : (
-              <Home theme={theme} onToggle={onToggle} />
+              <Suspense fallback={<div />}>
+                <Home theme={theme} onToggle={onToggle} />
+              </Suspense>
             )
           }
         />
-        <Route path="/home" element={<Home theme={theme} onToggle={onToggle} />} />
-        <Route path="/experience" element={<Experience theme={theme} onToggle={onToggle} />} />
-        <Route path="/education" element={<Education theme={theme} onToggle={onToggle} />} />
+        <Route path="/home" element={
+          <Suspense fallback={<div />}>
+            <Home theme={theme} onToggle={onToggle} />
+          </Suspense>
+        } />
+        <Route path="/experience" element={
+          <Suspense fallback={<div />}>
+            <Experience theme={theme} onToggle={onToggle} />
+          </Suspense>
+        } />
+        <Route path="/education" element={
+          <Suspense fallback={<div />}>
+            <Education theme={theme} onToggle={onToggle} />
+          </Suspense>
+        } />
 
         {featureFlags.sections.blogs && (
-          <Route path="/blogs" element={<BlogComponent theme={theme} onToggle={onToggle} />} />
+          <Route path="/blogs" element={
+            <Suspense fallback={<div />}>
+              <BlogComponent theme={theme} onToggle={onToggle} />
+            </Suspense>
+          } />
         )}
         {!featureFlags.sections.blogs && (
           <Route
@@ -46,7 +64,11 @@ export default function Main(props) {
 
         <Route
           path="/contact"
-          element={<Contact theme={theme} onToggle={onToggle} />}
+          element={
+            <Suspense fallback={<div />}>
+              <Contact theme={theme} onToggle={onToggle} />
+            </Suspense>
+          }
         />
 
         {settings.isSplash && (
@@ -57,7 +79,11 @@ export default function Main(props) {
           } />
         )}
 
-        <Route path="/projects" element={<Projects theme={theme} onToggle={onToggle} />} />
+        <Route path="/projects" element={
+          <Suspense fallback={<div />}>
+            <Projects theme={theme} onToggle={onToggle} />
+          </Suspense>
+        } />
         <Route
           path="*"
           element={<Error404 theme={theme} onToggle={onToggle} />}
