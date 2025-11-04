@@ -8,7 +8,7 @@ export const Fade = ({
   left = false,
   right = false,
   top = false,
-  duration = 1000,
+  duration = 400,
   distance = "20px",
   ...props
 }) => {

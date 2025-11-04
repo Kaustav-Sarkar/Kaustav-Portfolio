@@ -14,19 +14,20 @@ class ExperienceCard extends Component {
   }
 
   componentDidMount() {
-    // Delay calculation to ensure content is fully rendered
+    if (window.innerWidth <= 768) return;
+
     setTimeout(() => {
       this.calculateLineHeight();
     }, 500);
 
-    // Set up observer for accordion state changes
     this.setupAccordionObserver();
 
-    // Recalculate on window resize
     window.addEventListener('resize', this.handleResize);
   }
 
   componentDidUpdate(prevProps) {
+    if (window.innerWidth <= 768) return;
+
     if (prevProps.experience.description !== this.props.experience.description) {
       setTimeout(() => {
         this.calculateLineHeight();
@@ -42,7 +43,8 @@ class ExperienceCard extends Component {
   }
 
   setupAccordionObserver = () => {
-    // Find the parent accordion panel
+    if (window.innerWidth <= 768) return;
+
     const findAccordionPanel = (element) => {
       let current = element;
       while (current && current.parentElement) {
@@ -82,6 +84,8 @@ class ExperienceCard extends Component {
   };
 
   handleResize = () => {
+    if (window.innerWidth <= 768) return;
+
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => {
       this.calculateLineHeight();
