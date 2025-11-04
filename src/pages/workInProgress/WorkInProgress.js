@@ -28,7 +28,7 @@ class WorkInProgress extends Component {
           <div className="work-in-progress-content">
             <div className="wip-image-container">
               <img
-                src={require("../../assets/images/work_in_progress.png")}
+                src={require("../../assets/images/work_in_progress.webp")}
                 alt="Page under construction - work in progress illustration"
                 className="wip-image"
               />

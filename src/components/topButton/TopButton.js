@@ -1,48 +1,48 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./TopButton.css";
 import { FaArrowUp } from "react-icons/fa";
 
 export default function TopButton({ theme }) {
-  let lastScrollTop = 0;
-  let scrollTimeout = null;
+  const lastScrollTop = useRef(0);
+  const scrollTimeout = useRef(null);
 
   function GoUpEvent() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 
-  function scrollFunction() {
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const button = document.getElementById("topButton");
+  useEffect(() => {
+    function scrollFunction() {
+      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const button = document.getElementById("topButton");
 
-    if (!button) return;
+      if (!button) return;
 
-    // Clear any existing timeout
-    clearTimeout(scrollTimeout);
+      clearTimeout(scrollTimeout.current);
 
-    // Only show button if:
-    // 1. User has scrolled down more than 300px
-    // 2. User is scrolling up
-    // 3. Not at the very top
-    if (currentScrollTop > 300 && currentScrollTop < lastScrollTop && currentScrollTop > 50) {
-      button.classList.add("visible");
-    } else {
-      button.classList.remove("visible");
-    }
-
-    // Hide button after user stops scrolling for 2 seconds
-    scrollTimeout = setTimeout(() => {
-      if (currentScrollTop <= 50) {
+      if (currentScrollTop > 300 && currentScrollTop < lastScrollTop.current && currentScrollTop > 50) {
+        button.classList.add("visible");
+      } else {
         button.classList.remove("visible");
       }
-    }, 2000);
 
-    lastScrollTop = currentScrollTop;
-  }
+      scrollTimeout.current = setTimeout(() => {
+        const currentPos = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentPos <= 50) {
+          button.classList.remove("visible");
+        }
+      }, 2000);
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
+      lastScrollTop.current = currentScrollTop;
+    }
+
+    window.addEventListener('scroll', scrollFunction, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', scrollFunction);
+      clearTimeout(scrollTimeout.current);
+    };
+  }, []);
 
   const onMouseEnter = (color, bgColor) => {
     const topButton = document.getElementById("topButton");

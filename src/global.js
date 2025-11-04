@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    transition: all 0.25s linear;
+    transition: background-color 0.25s linear, color 0.25s linear;
 
     --font-agustina: "Agustina Regular";
     --font-montserrat: "Montserrat";

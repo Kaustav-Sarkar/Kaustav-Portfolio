@@ -268,7 +268,7 @@ const degrees = {
     {
       title: "Manipal Institute of Technology",
       subtitle: "B.Tech in Information Technology",
-      logo_path: "manipal_logo.png",
+      logo_path: "manipal_logo.webp",
       alt_name: "MIT Manipal",
       duration: "2019 - 2023",
       descriptions: [
@@ -305,7 +305,7 @@ const certifications = {
     {
       title: "Big Data Modeling and Management Systems",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/H7MFM43S8J6E",
       alt_name: "Coursera",
@@ -314,7 +314,7 @@ const certifications = {
     {
       title: "Big Data Integration and Processing",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/AALHV9Z4D89A",
       alt_name: "Coursera",
@@ -323,7 +323,7 @@ const certifications = {
     {
       title: "Introduction to Big Data",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/certificate/P83U4GY86DE2",
       alt_name: "Coursera",
@@ -352,7 +352,7 @@ const certifications = {
     {
       title: "Algorithmic Toolbox",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/T3PMRCV8ELE6",
       alt_name: "Coursera",
@@ -361,7 +361,7 @@ const certifications = {
     {
       title: "Python Data Structures",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/46VEELUH5MKQ",
       alt_name: "Coursera",
@@ -372,7 +372,7 @@ const certifications = {
     {
       title: "Convolutional Neural Networks",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/WVPCTSKXCJ8G",
       alt_name: "Coursera",
@@ -382,7 +382,7 @@ const certifications = {
       title:
         "Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/ENSRQLHHKPC4",
       alt_name: "Coursera",
@@ -391,7 +391,7 @@ const certifications = {
     {
       title: "Neural Networks and Deep Learning",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/CBS4QX3LWHSD",
       alt_name: "Coursera",
@@ -411,7 +411,7 @@ const certifications = {
     {
       title: "Probability Theory, Statistics and Exploratory Data Analysis",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/4NA8J8CZSHG3",
       alt_name: "Coursera",
@@ -420,7 +420,7 @@ const certifications = {
     {
       title: "High-Impact Business Writing",
       subtitle: "Coursera",
-      logo_path: "coursera_logo.png",
+      logo_path: "coursera_logo.webp",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/TXYHHYSE9TLN",
       alt_name: "Coursera",
@@ -453,7 +453,7 @@ const experience = {
           title: "SDE-2 - Data Services Platform",
           company: "Cloudera",
           company_url: "https://www.cloudera.com/",
-          logo_path: "cloudera_logo.png",
+          logo_path: "cloudera_logo.webp",
           location: "Bangalore, India",
           description:
             "• Built secure API exposure layer using Istio gateways, auth policies, and Apache Knox for authenticated access to Helm-deployed applications\n• Integrated Cadence with Spring Boot microservices for long-running workflow orchestration with full retry and failure handling\n• Refactored internal Helm deployment into a parameterized Go library, integrated with Vault, and wrapped it for Java-based services",
@@ -463,7 +463,7 @@ const experience = {
           title: "SDE - Datalake MicroService",
           company: "Cloudera",
           company_url: "https://www.cloudera.com/",
-          logo_path: "cloudera_logo.png",
+          logo_path: "cloudera_logo.webp",
           duration: "Aug 2023 - Feb 2025",
           location: "Bangalore, India",
           description:
@@ -479,7 +479,7 @@ const experience = {
           title: "SDE Intern - SDXSaaS Dashboard",
           company: "Cloudera",
           company_url: "https://www.cloudera.com/",
-          logo_path: "cloudera_logo.png",
+          logo_path: "cloudera_logo.webp",
           duration: "Jan 2023 - Aug 2023",
           location: "Bangalore, India",
           description:
@@ -512,7 +512,7 @@ const experience = {
           title: "Research Intern",
           company: "Manipal Institute of Technology",
           company_url: "https://www.manipal.edu/mit.html",
-          logo_path: "manipal_logo.png",
+          logo_path: "manipal_logo.webp",
           duration: "May 2022 - July 2022",
           location: "Bangalore, India (Remote)",
           description:
@@ -528,7 +528,7 @@ const experience = {
           title: "Senior AI Member",
           company: "Manas",
           company_url: "https://projectmanas.in/",
-          logo_path: "manas.png",
+          logo_path: "manas.webp",
           duration: "May 2021 - Sep 2022",
           location: "Manipal, India",
           description:
@@ -540,7 +540,7 @@ const experience = {
           company: "Innovation Center Manipal",
           company_url:
             "https://www.manipal.edu/mu/important-links/innovation-entrepreneruship/innovation-centre.html",
-          logo_path: "manipal_logo.png",
+          logo_path: "manipal_logo.webp",
           duration: "May 2020 - Sep 2022",
           location: "Manipal, India",
           description:
@@ -556,7 +556,7 @@ const experience = {
           title: "CSR Member",
           company: "Cloudera Cares",
           company_url: "https://www.cloudera.com/about/philanthropy",
-          logo_path: "cloudera_logo.png",
+          logo_path: "cloudera_logo.webp",
           duration: "Jan 2024 - Present",
           location: "Bangalore, India",
           description:
