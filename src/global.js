@@ -1,6 +1,28 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+  :root {
+    /* Light theme colors (default) */
+    --theme-text: #18181b;
+    --theme-image-highlight: #7c3aed;
+    --theme-comp-img-highlight: #e4e4e7;
+    --theme-jacket-color: #8b5cf6;
+    --theme-dark: #18181b;
+    --theme-surface: #fafafa;
+    --theme-border: #e4e4e7;
+  }
+
+  [data-theme="dark"] {
+    /* Dark theme colors */
+    --theme-text: #e4e4e7;
+    --theme-image-highlight: #8b5cf6;
+    --theme-comp-img-highlight: #27272a;
+    --theme-jacket-color: #4c1d95;
+    --theme-dark: #000000;
+    --theme-surface: #18181b;
+    --theme-border: #27272a;
+  }
+
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};

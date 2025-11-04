@@ -19,6 +19,7 @@ function App() {
     try {
       const themeName = theme === lightTheme ? "light" : "dark";
       localStorage.setItem("theme", themeName);
+      document.documentElement.setAttribute("data-theme", themeName);
     } catch (e) {
       console.warn("localStorage not available");
     }

@@ -30,6 +30,23 @@
   margin-top: 100px;
 }
 
+.skill-illustration {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.skill-illustration svg {
+  width: 100%;
+  height: auto;
+}
+
+.skill-illustration-placeholder {
+  width: 100%;
+  height: 400px;
+  background: transparent;
+}
+
 .skills-heading {
   font-size: var(--font-section-subtitle);
   font-weight: 400;

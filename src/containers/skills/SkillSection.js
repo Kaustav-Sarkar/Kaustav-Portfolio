@@ -1,22 +1,57 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
 import { Fade } from "../../components/Fade";
-import DataScienceImg from "./DataScienceImg";
-import FullStackImg from "./FullStackImg";
-import CloudInfraImg from "./CloudInfraImg";
-import ServerClusterImg from "./ServerClusterImg";
+
+function LazyInlineSvg({ src, alt }) {
+  const [svgContent, setSvgContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(src)
+      .then(response => response.text())
+      .then(data => {
+        setSvgContent(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error loading SVG:', error);
+        setLoading(false);
+      });
+  }, [src]);
+
+  if (loading) {
+    return <div className="skill-illustration-placeholder" />;
+  }
+
+  return (
+    <div 
+      className="skill-illustration"
+      dangerouslySetInnerHTML={{ __html: svgContent }}
+    />
+  );
+}
 
 function GetSkillSvg(props) {
-  if (props.fileName === "DataScienceImg")
-    return <DataScienceImg theme={props.theme} />;
-  else if (props.fileName === "FullStackImg")
-    return <FullStackImg theme={props.theme} />;
-  else if (props.fileName === "CloudInfraImg")
-    return <CloudInfraImg theme={props.theme} />;
-  else if (props.fileName === "ServerClusterImg")
-    return <ServerClusterImg theme={props.theme} />;
+  const svgMap = {
+    'DataScienceImg': '/images/skills/data-science.svg',
+    'FullStackImg': '/images/skills/full-stack.svg',
+    'CloudInfraImg': '/images/skills/cloud-infra.svg',
+    'ServerClusterImg': '/images/skills/server-cluster.svg',
+  };
+  
+  const svgSrc = svgMap[props.fileName];
+  
+  if (svgSrc) {
+    return (
+      <LazyInlineSvg 
+        src={svgSrc}
+        alt={props.fileName.replace('Img', '')}
+      />
+    );
+  }
+  
   return null;
 }
 
