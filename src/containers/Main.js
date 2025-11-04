@@ -1,16 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import WorkInProgress from "../pages/workInProgress/WorkInProgress";
 import featureFlags from "../featureFlags";
-import Splash from "../pages/splash/Splash";
 import Home from "../pages/home/HomeComponent";
 import Education from "../pages/education/EducationComponent";
 import Experience from "../pages/experience/Experience";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
 import BlogComponent from "../pages/blogs/BlogComponent";
+
+const Splash = React.lazy(() => import("../pages/splash/Splash"));
 
 export default function Main(props) {
   const { theme, onToggle } = props;
@@ -21,7 +22,9 @@ export default function Main(props) {
           path="/"
           element={
             settings.isSplash ? (
-              <Splash theme={theme} />
+              <Suspense fallback={<div />}>
+                <Splash theme={theme} />
+              </Suspense>
             ) : (
               <Home theme={theme} onToggle={onToggle} />
             )
@@ -47,7 +50,11 @@ export default function Main(props) {
         />
 
         {settings.isSplash && (
-          <Route path="/splash" element={<Splash theme={theme} />} />
+          <Route path="/splash" element={
+            <Suspense fallback={<div />}>
+              <Splash theme={theme} />
+            </Suspense>
+          } />
         )}
 
         <Route path="/projects" element={<Projects theme={theme} onToggle={onToggle} />} />
