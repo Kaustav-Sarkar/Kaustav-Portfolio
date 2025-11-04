@@ -518,5 +518,3 @@
                     fill="var(--theme-border)"
                 />
             </svg>
-        );
-    }

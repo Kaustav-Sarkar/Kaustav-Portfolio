@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { Component, useState, useEffect, useRef } from "react";
 import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
@@ -7,26 +7,47 @@ import { Fade } from "../../components/Fade";
 function LazyInlineSvg({ src, alt }) {
   const [svgContent, setSvgContent] = useState(null);
   const [loading, setLoading] = useState(true);
+  const ref = useRef(null);
 
   useEffect(() => {
-    fetch(src)
-      .then(response => response.text())
-      .then(data => {
-        setSvgContent(data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error loading SVG:', error);
-        setLoading(false);
-      });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          fetch(src)
+            .then(response => response.text())
+            .then(data => {
+              setSvgContent(data);
+              setLoading(false);
+            })
+            .catch(error => {
+              console.error('Error loading SVG:', error);
+              setLoading(false);
+            });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, [src]);
 
   if (loading) {
-    return <div className="skill-illustration-placeholder" />;
+    return <div ref={ref} className="skill-illustration-placeholder" />;
   }
 
   return (
-    <div 
+    <div
+      ref={ref}
       className="skill-illustration"
       dangerouslySetInnerHTML={{ __html: svgContent }}
     />
@@ -40,18 +61,18 @@ function GetSkillSvg(props) {
     'CloudInfraImg': '/images/skills/cloud-infra.svg',
     'ServerClusterImg': '/images/skills/server-cluster.svg',
   };
-  
+
   const svgSrc = svgMap[props.fileName];
-  
+
   if (svgSrc) {
     return (
-      <LazyInlineSvg 
+      <LazyInlineSvg
         src={svgSrc}
         alt={props.fileName.replace('Img', '')}
       />
     );
   }
-  
+
   return null;
 }
 
