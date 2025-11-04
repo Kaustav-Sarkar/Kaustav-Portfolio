@@ -24,7 +24,7 @@ export default function GithubRepoCard({ repo, theme }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Fade bottom duration={1000} distance="40px">
+      <Fade bottom distance="40px">
         <div key={repo.id}>
           <div
             className={`repo-name-div ${!hasUrls ? "no-links" : ""}`}

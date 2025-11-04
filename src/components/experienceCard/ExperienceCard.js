@@ -146,7 +146,7 @@ class ExperienceCard extends Component {
         className="experience-list-item"
         style={{ marginTop: index === 0 ? 30 : 50 }}
       >
-        <Fade left duration={1000} distance="40px">
+        <Fade left distance="40px">
           <div className="experience-card-logo-div">
             <a
               href={experience["company_url"]}
@@ -203,7 +203,7 @@ class ExperienceCard extends Component {
             />
           )}
         </div>
-        <Fade right duration={1000} distance="40px">
+        <Fade right distance="40px">
           <div style={{ display: "flex", flexDirection: "row" }}>
             <div
               className="experience-card"

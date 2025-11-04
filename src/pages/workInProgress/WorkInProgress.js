@@ -24,7 +24,7 @@ class WorkInProgress extends Component {
     const theme = this.props.theme;
     return (
       <div className="work-in-progress-main">
-        <Fade bottom duration={1000} distance="40px">
+        <Fade bottom distance="40px">
           <div className="work-in-progress-content">
             <div className="wip-image-container">
               <img

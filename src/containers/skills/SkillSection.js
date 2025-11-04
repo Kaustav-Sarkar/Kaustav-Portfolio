@@ -104,7 +104,7 @@ class SkillSection extends Component {
       <div>
         {skills.data.map((skill, i) => {
           return (
-            <Fade bottom duration={400} key={i}>
+            <Fade bottom key={i}>
               <div className="skills-main-div">
                 <div className="skills-image-div">
                   { }

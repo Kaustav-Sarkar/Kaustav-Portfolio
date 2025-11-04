@@ -49,7 +49,7 @@ class Testimonials extends Component {
 
     return (
       <div className="testimonials-main">
-        <Fade bottom duration={1000} distance="40px">
+        <Fade bottom distance="40px">
           <div className="testimonials-header-div">
             <h1 className="testimonials-header" style={{ color: theme.text }}>
               {testimonials.title}

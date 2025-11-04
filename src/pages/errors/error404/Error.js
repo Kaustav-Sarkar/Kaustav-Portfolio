@@ -19,7 +19,7 @@ export default class Error extends Component {
         </Helmet>
         <Header theme={this.props.theme} />
         <div className="error-class">
-          <Fade bottom duration={1000} distance="40px">
+          <Fade bottom distance="40px">
             <h1>Woops</h1>
             <h1 className="error-404">404</h1>
             <p>The requested page is unavailable at the moment!</p>

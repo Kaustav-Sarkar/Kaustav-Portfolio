@@ -6,7 +6,7 @@ import { Fade } from "../../components/Fade";
 
 export default function Blogs() {
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <Fade bottom distance="20px">
       <div className="blog-main-div">
         {blogSection.blogs.map((blog, index) => {
           return (

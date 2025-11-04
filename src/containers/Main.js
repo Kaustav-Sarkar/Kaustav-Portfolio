@@ -4,6 +4,7 @@ import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import WorkInProgress from "../pages/workInProgress/WorkInProgress";
 import featureFlags from "../featureFlags";
+import { PageTransition } from "../components/pageTransition/PageTransition";
 
 const Splash = React.lazy(() => import("../pages/splash/Splash"));
 const Home = React.lazy(() => import("../pages/home/HomeComponent"));
@@ -21,72 +22,96 @@ export default function Main(props) {
         <Route
           path="/"
           element={
-            settings.isSplash ? (
-              <Suspense fallback={<div />}>
-                <Splash theme={theme} />
-              </Suspense>
-            ) : (
-              <Suspense fallback={<div />}>
-                <Home theme={theme} onToggle={onToggle} />
-              </Suspense>
-            )
+            <PageTransition>
+              {settings.isSplash ? (
+                <Suspense fallback={<div />}>
+                  <Splash theme={theme} />
+                </Suspense>
+              ) : (
+                <Suspense fallback={<div />}>
+                  <Home theme={theme} onToggle={onToggle} />
+                </Suspense>
+              )}
+            </PageTransition>
           }
         />
         <Route path="/home" element={
-          <Suspense fallback={<div />}>
-            <Home theme={theme} onToggle={onToggle} />
-          </Suspense>
+          <PageTransition>
+            <Suspense fallback={<div />}>
+              <Home theme={theme} onToggle={onToggle} />
+            </Suspense>
+          </PageTransition>
         } />
         <Route path="/experience" element={
-          <Suspense fallback={<div />}>
-            <Experience theme={theme} onToggle={onToggle} />
-          </Suspense>
+          <PageTransition>
+            <Suspense fallback={<div />}>
+              <Experience theme={theme} onToggle={onToggle} />
+            </Suspense>
+          </PageTransition>
         } />
         <Route path="/education" element={
-          <Suspense fallback={<div />}>
-            <Education theme={theme} onToggle={onToggle} />
-          </Suspense>
+          <PageTransition>
+            <Suspense fallback={<div />}>
+              <Education theme={theme} onToggle={onToggle} />
+            </Suspense>
+          </PageTransition>
         } />
 
         {featureFlags.sections.blogs && (
           <Route path="/blogs" element={
-            <Suspense fallback={<div />}>
-              <BlogComponent theme={theme} onToggle={onToggle} />
-            </Suspense>
+            <PageTransition>
+              <Suspense fallback={<div />}>
+                <BlogComponent theme={theme} onToggle={onToggle} />
+              </Suspense>
+            </PageTransition>
           } />
         )}
         {!featureFlags.sections.blogs && (
           <Route
             path="/blogs"
-            element={<WorkInProgress theme={theme} onToggle={onToggle} />}
+            element={
+              <PageTransition>
+                <WorkInProgress theme={theme} onToggle={onToggle} />
+              </PageTransition>
+            }
           />
         )}
 
         <Route
           path="/contact"
           element={
-            <Suspense fallback={<div />}>
-              <Contact theme={theme} onToggle={onToggle} />
-            </Suspense>
+            <PageTransition>
+              <Suspense fallback={<div />}>
+                <Contact theme={theme} onToggle={onToggle} />
+              </Suspense>
+            </PageTransition>
           }
         />
 
         {settings.isSplash && (
           <Route path="/splash" element={
-            <Suspense fallback={<div />}>
-              <Splash theme={theme} />
-            </Suspense>
+            <PageTransition>
+              <Suspense fallback={<div />}>
+                <Splash theme={theme} />
+              </Suspense>
+            </PageTransition>
           } />
         )}
 
         <Route path="/projects" element={
-          <Suspense fallback={<div />}>
-            <Projects theme={theme} onToggle={onToggle} />
-          </Suspense>
+          <PageTransition>
+            <Suspense fallback={<div />}>
+              <Projects theme={theme} onToggle={onToggle} />
+            </Suspense>
+          </PageTransition>
         } />
         <Route
           path="*"
-          element={<Error404 theme={theme} onToggle={onToggle} />}
+          element={
+            <PageTransition>
+              <Error404 theme={theme} onToggle={onToggle} />
+            </PageTransition>
+          }
         />
       </Routes>
     </BrowserRouter>

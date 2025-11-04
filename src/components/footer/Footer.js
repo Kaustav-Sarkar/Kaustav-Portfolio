@@ -5,7 +5,7 @@ import "./Footer.css";
 
 export default function Footer(props) {
   return (
-    <Fade bottom duration={1000} distance="20px">
+    <Fade bottom distance="20px">
       <footer className="footer-container">
         <div className="footer-content">
           <div className="footer-copyright">

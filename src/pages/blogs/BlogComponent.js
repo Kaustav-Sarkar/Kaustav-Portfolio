@@ -15,7 +15,7 @@ class BlogComponent extends Component {
       <div className="blogs-main">
         <Header theme={this.props.theme} />
         <div className="basic-blogs">
-          <Fade bottom duration={1000} distance="40px">
+          <Fade bottom distance="40px">
             <div className="blogs-heading-div">
               <div className="blogs-heading-img-div">
                 <BlogsImg theme={theme} />

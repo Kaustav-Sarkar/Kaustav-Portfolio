@@ -4,7 +4,6 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
 import Button from "../../components/button/Button";
-import { Fade } from "../../components/Fade";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsImg from "./ProjectsImg";
 import "./Projects.css";
@@ -52,33 +51,31 @@ class Projects extends Component {
         </Helmet>
         <Header theme={theme} />
         <div className="basic-projects">
-          <Fade bottom duration={1000} distance="40px">
-            <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
-                <ProjectsImg theme={theme} />
-              </div>
-              <div className="projects-heading-text-div">
-                <h1
-                  className="projects-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {projectsHeader.title}
-                </h1>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {projectsHeader["description"]}
-                </p>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {projectsHeader["descriptionLine2"]}
-                </p>
-              </div>
+          <div className="projects-heading-div">
+            <div className="projects-heading-img-div">
+              <ProjectsImg theme={theme} />
             </div>
-          </Fade>
+            <div className="projects-heading-text-div">
+              <h1
+                className="projects-heading-text"
+                style={{ color: theme.text }}
+              >
+                {projectsHeader.title}
+              </h1>
+              <p
+                className="projects-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {projectsHeader["description"]}
+              </p>
+              <p
+                className="projects-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {projectsHeader["descriptionLine2"]}
+              </p>
+            </div>
+          </div>
         </div>
 
         {featureFlags.sections.flagshipProjects && (

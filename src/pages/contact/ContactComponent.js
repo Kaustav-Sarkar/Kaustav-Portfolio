@@ -56,54 +56,52 @@ class Contact extends Component {
         </Helmet>
         <Header theme={theme} />
         <div className="basic-contact">
-          <Fade bottom duration={1000} distance="40px">
-            <div className="contact-heading-div">
-              <div className="contact-heading-img-div">
-                <picture>
-                  <source
-                    srcSet="/images/kaustav.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet="/images/kaustav.jpeg"
-                    type="image/jpeg"
-                  />
-                  <img
-                    src="/images/kaustav.jpeg"
-                    alt="Kaustav Sarkar - Senior Backend Engineer"
-                    loading="eager"
-                    width="300"
-                    height="300"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
-              <div className="contact-heading-text-div">
-                <h1
-                  className="contact-heading-text"
-                  style={{ color: theme.text }}
-                >
-                  {ContactData["title"]}
-                </h1>
-                <p
-                  className="contact-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
-                  {ContactData["description"]}
-                </p>
-                <SocialMedia theme={theme} />
-                <div className="resume-btn-div">
-                  <Button
-                    text="See My Resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                    theme={theme}
-                  />
-                </div>
+          <div className="contact-heading-div">
+            <div className="contact-heading-img-div">
+              <picture>
+                <source
+                  srcSet="/images/kaustav.webp"
+                  type="image/webp"
+                />
+                <source
+                  srcSet="/images/kaustav.jpeg"
+                  type="image/jpeg"
+                />
+                <img
+                  src="/images/kaustav.jpeg"
+                  alt="Kaustav Sarkar - Senior Backend Engineer"
+                  loading="eager"
+                  width="300"
+                  height="300"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+            <div className="contact-heading-text-div">
+              <h1
+                className="contact-heading-text"
+                style={{ color: theme.text }}
+              >
+                {ContactData["title"]}
+              </h1>
+              <p
+                className="contact-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {ContactData["description"]}
+              </p>
+              <SocialMedia theme={theme} />
+              <div className="resume-btn-div">
+                <Button
+                  text="See My Resume"
+                  newTab={true}
+                  href={greeting.resumeLink}
+                  theme={theme}
+                />
               </div>
             </div>
-          </Fade>
-          <Fade bottom duration={1000} distance="40px">
+          </div>
+          <Fade bottom distance="40px">
             <div className="blog-heading-div">
               <div className="blog-heading-text-div">
                 <h1 className="blog-heading-text" style={{ color: theme.text }}>
@@ -132,7 +130,7 @@ class Contact extends Component {
           {featureFlags.sections.testimonials && (
             <Testimonials testimonials={testimonials} theme={theme} />
           )}
-          <Fade bottom duration={1000} distance="40px">
+          <Fade bottom distance="40px">
             <div className="contact-form-section">
               <div className="contact-form-with-earth">
                 <ContactForm theme={theme} />
