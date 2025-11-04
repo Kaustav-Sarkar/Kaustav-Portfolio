@@ -9,8 +9,17 @@ import { Fade } from "../../components/Fade";
 import ExperienceImg from "./ExperienceImg";
 import featureFlags from "../../featureFlags";
 import { Helmet } from "react-helmet";
+import { preloadPageSvgs, clearRegistry } from "../../utils/svgCache";
 
 class Experience extends Component {
+  componentDidMount() {
+    preloadPageSvgs();
+  }
+
+  componentWillUnmount() {
+    clearRegistry();
+  }
+
   render() {
     const theme = this.props.theme;
 

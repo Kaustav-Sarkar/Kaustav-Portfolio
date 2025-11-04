@@ -12,8 +12,17 @@ import projects from "../../shared/opensource/projects.json";
 import { Helmet } from "react-helmet";
 import FlagshipProject from "../../containers/FlagshipProjects/FlagshipProject";
 import featureFlags from "../../featureFlags";
+import { preloadPageSvgs, clearRegistry } from "../../utils/svgCache";
 
 class Projects extends Component {
+  componentDidMount() {
+    preloadPageSvgs();
+  }
+
+  componentWillUnmount() {
+    clearRegistry();
+  }
+
   render() {
     const theme = this.props.theme;
     return (

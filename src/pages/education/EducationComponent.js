@@ -10,8 +10,17 @@ import { certifications, degrees } from "../../portfolio";
 import { Fade } from "../../components/Fade";
 import featureFlags from "../../featureFlags";
 import { Helmet } from "react-helmet";
+import { preloadPageSvgs, clearRegistry } from "../../utils/svgCache";
 
 class EducationComponent extends Component {
+  componentDidMount() {
+    preloadPageSvgs();
+  }
+
+  componentWillUnmount() {
+    clearRegistry();
+  }
+
   render() {
     const theme = this.props.theme;
     return (

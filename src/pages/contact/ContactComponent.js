@@ -13,11 +13,20 @@ import { greeting, contactPageData, testimonials } from "../../portfolio.js";
 import featureFlags from "../../featureFlags";
 import { Helmet } from "react-helmet";
 import EarthCanvas from "../../components/canvas/EarthCanvas";
+import { preloadPageSvgs, clearRegistry } from "../../utils/svgCache";
 
 const ContactData = contactPageData.contactSection;
 const blogSection = contactPageData.blogSection;
 
 class Contact extends Component {
+  componentDidMount() {
+    preloadPageSvgs();
+  }
+
+  componentWillUnmount() {
+    clearRegistry();
+  }
+
   render() {
     const theme = this.props.theme;
     return (

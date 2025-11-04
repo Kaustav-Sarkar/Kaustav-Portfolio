@@ -3,26 +3,47 @@ import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
 import { Fade } from "../../components/Fade";
+import {
+  getCachedSvg,
+  setCachedSvg,
+  hasCachedSvg,
+  registerSvgUrl
+} from "../../utils/svgCache";
 
 function LazyInlineSvg({ src, alt }) {
-  const [svgContent, setSvgContent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [svgContent, setSvgContent] = useState(() => getCachedSvg(src));
+  const [loading, setLoading] = useState(!svgContent);
   const ref = useRef(null);
 
   useEffect(() => {
+    registerSvgUrl(src);
+  }, [src]);
+
+  useEffect(() => {
+    if (svgContent) {
+      setLoading(false);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          fetch(src)
-            .then(response => response.text())
-            .then(data => {
-              setSvgContent(data);
-              setLoading(false);
-            })
-            .catch(error => {
-              console.error('Error loading SVG:', error);
-              setLoading(false);
-            });
+          if (hasCachedSvg(src)) {
+            setSvgContent(getCachedSvg(src));
+            setLoading(false);
+          } else {
+            fetch(src)
+              .then(response => response.text())
+              .then(data => {
+                setCachedSvg(src, data);
+                setSvgContent(data);
+                setLoading(false);
+              })
+              .catch(error => {
+                console.error('Error loading SVG:', error);
+                setLoading(false);
+              });
+          }
           observer.disconnect();
         }
       },
@@ -39,7 +60,7 @@ function LazyInlineSvg({ src, alt }) {
         observer.unobserve(currentRef);
       }
     };
-  }, [src]);
+  }, [src, svgContent]);
 
   if (loading) {
     return <div ref={ref} className="skill-illustration-placeholder" />;
