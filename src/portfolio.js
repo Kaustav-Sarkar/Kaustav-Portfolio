@@ -8,7 +8,7 @@ const settings = {
 const seo = {
   title: "Kaustav's Portfolio",
   description:
-    "A passionate Software Engineer who thrives on building backend systems, cloud infrastructure, and orchestration platforms that scale and solve real problems. I take ownership of what I build — from internal tools to production systems — and focus on making them reliable, usable, and easy for others to build on. I enjoy enabling teams through better abstractions, clean APIs, and well-designed systems.",
+    "I build distributed systems and platform engineering solutions that generate millions. SDE-2 at Cloudera, cutting infrastructure costs by 95%, modernizing legacy architectures, and thriving on greenfield projects. Working toward leading teams that ship industry-defining products.",
   og: {
     title: "Kaustav Sarkar Portfolio",
     type: "website",
@@ -21,7 +21,7 @@ const greeting = {
   title: "Kaustav Sarkar",
   logo_name: "KaustavSarkar",
   nickname: "tech_whiz",
-  subTitle: "I build scalable, business-aware systems that power modern companies, focusing on technology that drives product success and enables engineering teams. Privacy and security aren't afterthoughts, they're fundamental principles I embed in every solution I create. Fueled by a passion for continuous learning and resilience, I thrive on tackling complex challenges and improving every day",
+  subTitle: "I believe engineering should benefit humanity, not just generate revenue. I want to build products that millions rely on, accessible, intuitive and work seamlessly. I chase greenfield projects for the creative freedom, no playbook, no legacy constraints, just ambiguity and the chance to architect the best version of something from scratch. I'm building distributed systems today, on my way to leading teams that ship products setting the standard for entire industries",
   resumeLink:
     "https://drive.google.com/file/d/118v_F2dGxCBBaVTkVCobgLK4KyTFqQ7-/view?usp=sharing",
   portfolio_repository: "https://github.com/Kaustav-Sarkar/Kaustav-Portfolio",
@@ -58,12 +58,12 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "Cloud Infrastructure & Backend Engineering",
-      fileName: "CloudInfraImg",
+      title: "Backend & Distributed Systems",
+      fileName: "ServerClusterImg",
       skills: [
-        "⚡ Architecting and developing scalable, multi-cloud backend services in Java and Go, engineered for high availability on Kubernetes",
-        "⚡ Orchestrating complex, distributed workflows with Cadence, ensuring system resilience through robust failure recovery and fault-tolerant design",
-        "⚡ Implementing fault-tolerant microservices with a focus on data consistency and persistence using JPA/Hibernate",
+        "⚡ I orchestrate workflows that save millions. Built lifecycle management APIs with Cadence that cut infrastructure costs by 80-95% and reduced operation time from 4 hours -> 30 minutes through async parallelization.",
+        "⚡ I like to tackle challenging problems. When Cadence and Spring Boot were fundamentally incompatible, I built the bridge through custom ApplicationContext injection and externalized config. Shipped it, standardized it company-wide, adopted by 8+ services building distributed workflows.",
+        "⚡ I build systems that handle messy real-world problems. Backward-compatible migrations for customers with zero disruptions. Idempotent deletions that eliminated 97% of manual cleanup and orphaned resources.",
       ],
       softwareSkills: [
         {
@@ -118,13 +118,12 @@ const skills = {
       ],
     },
     {
-      title: "Platform Engineering",
-      fileName: "ServerClusterImg",
+      title: "Platform Engineering & Cloud Infrastructure",
+      fileName: "CloudInfraImg",
       skills: [
-        "⚡ Engineering standardized deployment frameworks using Helm and Vault to enable secure, repeatable, and automated CI/CD pipelines",
-        "⚡ Creating internal developer platforms (IDPs), CLIs, and SDKs to abstract away infrastructure complexity and boost engineering velocity",
-        "⚡ Driving the evolution of internal libraries, creating reusable components that accelerate development across multiple teams",
-        "⚡ Building observability and control-plane tooling—including monitoring dashboards and APIs (REST/gRPC)—that give teams visibility and confidence in their systems",
+        "⚡ I turn multi-cloud chaos into unified platforms. Built K8s management system consolidating EKS, GKE, and AKS operations, cutting ops time by 60%+ for all SaaS datalakes. One interface instead of three cloud consoles and kubectl.",
+        "⚡ I build enterprise-grade security into infrastructure. Architected API gateway with Istio and custom K8s operators securing 25+ critical endpoints across public and private clouds. Authentication enforced once at the platform layer, not scattered across every service.",
+        "⚡ I modernize legacy architecture for portability. Containerized and decoupled Atlas from VM-based infrastructure, enabling deployment on any Kubernetes platform with independent scaling. From monolithic to cloud-native.",
       ],
       softwareSkills: [
         {
@@ -194,13 +193,12 @@ const skills = {
       ],
     },
     {
-      title: "AI & Applied Machine Learning",
+      title: "Big Data Platforms & Security",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Delivering production-ready AI features, from privacy-first posture correction with TensorFlow.js to real-time sentiment analysis using OpenCV",
-        "⚡ Specializing in lightweight, efficient models designed for real-world environments, solving targeted problems without compromising user privacy",
-        "⚡ Blending AI with real-world systems to enhance UX and unlock new capabilities in production applications",
-        "⚡ Implementing computer vision solutions for object detection, image segmentation, and real-time analysis",
+        "⚡ I built a security product from scratch. Engineered vulnerability scanning platform for 10+ enterprise customers reducing breaches by 30%. Graph-based modeling of misconfigurations, dependencies, and containers across GCP/AWS/Heroku with interactive UI and queryable API.",
+        "⚡ I work with complex data platform ecosystems. Enhanced Ranger with multi-database support (RDS for enterprise, embedded for lightweight deployments). Redesigned metadata APIs from hardcoded to dynamic, provider-agnostic models. Built systems exposing Kafka, Atlas, and Ranger to external users.",
+        "⚡ I design APIs that scale across data platforms. Built event-driven architectures with Kafka for real-time pipelines. Created provider-agnostic metadata interfaces that downstream teams extend without breaking existing integrations.",
       ],
       softwareSkills: [
         {
@@ -262,7 +260,7 @@ const degrees = {
   title: "Education",
   subtitle: "Continuous Learning, Continuous Growth",
   description:
-    "Education is not just about degrees—it's a lifelong commitment to growth. I believe in learning from every experience, whether through formal education, certifications, or real-world challenges. Each day brings an opportunity to expand my knowledge, refine my skills, and become a better engineer and leader",
+    "Education is not just about degrees, it's a lifelong commitment to growth. I believe in learning from every experience, whether through formal education, certifications, or real-world challenges. Each day brings an opportunity to expand my knowledge, refine my skills, and become a better engineer and leader",
   header_image_path: "education.svg",
   degrees: [
     {
@@ -272,9 +270,9 @@ const degrees = {
       alt_name: "MIT Manipal",
       duration: "2019 - 2023",
       descriptions: [
-        "⚡ Built a rigorous foundation in data structures, algorithms, and systems design, equipping me to build scalable and resilient platforms",
-        "⚡ Cultivated proficiency in Java, Python, C++, and JavaScript through hands-on coursework, developing end-to-end applications to solve real-world challenges",
-        "⚡ Applied cloud services, machine learning frameworks, and full-stack architectures in capstone projects to solve complex problems and prepare for end-to-end system ownership",
+        "⚡ Won 2 AI hackathons (sound classification, furniture detection) and placed first in MANAS recruitment solving complex pathfinding algorithms with near-zero coding experience. Joined MANAS autonomous vehicle team and Innovation Society Manipal.",
+        "⚡ Started professional work early. Secured X80 Security internship at start of 3rd year, continued through 4th year building production security systems. Learned to ship real products while still in college.",
+        "⚡ Built production-grade capstone projects: Automated Valet Parking perception system using YOLO, FCN32, and PCL. Crowd sentiment analysis app achieving 25% engagement improvement through computer vision.",
       ],
       website_link: "https://manipal.edu/mit.html",
     },
@@ -283,7 +281,27 @@ const degrees = {
 
 const certifications = {
   certifications: [
-    // Big Data & Infrastructure
+    // Cloud & Kubernetes
+    {
+      title: "Kubernetes Certified Application Developer (CKAD) with Tests",
+      subtitle: "Udemy - Mumshad Mannambeth, KodeKloud Training",
+      fontAwesomeClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-6f549291-bf8e-49c8-9650-87d235954e34/",
+      alt_name: "Udemy",
+      color_code: "#A435F0",
+    },
+    {
+      title: "Ultimate AWS Certified Cloud Practitioner CLF-C02 2025",
+      subtitle: "Udemy - Stephane Maarek",
+      fontAwesomeClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-6bee2340-29a5-4551-8fac-2bbfe821fe41/",
+      alt_name: "Udemy",
+      color_code: "#A435F0",
+    },
+
+    // Big Data & Systems
     {
       title: "Executive Briefing: Big Data and the Hadoop Ecosystem",
       subtitle: "Udemy - Sundog Education by Frank Kane",
@@ -350,6 +368,24 @@ const certifications = {
       color_code: "#A435F0",
     },
     {
+      title: "Mastering the System Design Interview",
+      subtitle: "Udemy - Sundog Education by Frank Kane",
+      fontAwesomeClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-c4f12a22-b6a7-4db4-a88e-e89d4a6665d7/",
+      alt_name: "Udemy",
+      color_code: "#A435F0",
+    },
+    {
+      title: "Introduction to Networking",
+      subtitle: "Udemy - Kevin Brown",
+      fontAwesomeClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-307098e9-0bdb-436e-8502-7c02b31725f7/",
+      alt_name: "Udemy",
+      color_code: "#A435F0",
+    },
+    {
       title: "Algorithmic Toolbox",
       subtitle: "Coursera",
       logo_path: "coursera_logo.webp",
@@ -398,16 +434,7 @@ const certifications = {
       color_code: "#0056D2",
     },
 
-    // General Skills
-    {
-      title: "Practical Time Management - Personal Productivity Tools",
-      subtitle: "Udemy - Paul Ashun",
-      fontAwesomeClassname: "simple-icons:udemy",
-      certificate_link:
-        "https://www.udemy.com/certificate/UC-d8c35441-a4bf-4598-8185-03e3b22e4294/",
-      alt_name: "Udemy",
-      color_code: "#A435F0",
-    },
+    // Soft Skills & General
     {
       title: "Probability Theory, Statistics and Exploratory Data Analysis",
       subtitle: "Coursera",
@@ -427,6 +454,15 @@ const certifications = {
       color_code: "#0056D2",
     },
     {
+      title: "Practical Time Management - Personal Productivity Tools",
+      subtitle: "Udemy - Paul Ashun",
+      fontAwesomeClassname: "simple-icons:udemy",
+      certificate_link:
+        "https://www.udemy.com/certificate/UC-d8c35441-a4bf-4598-8185-03e3b22e4294/",
+      alt_name: "Udemy",
+      color_code: "#A435F0",
+    },
+    {
       title: "Embracing a Culture of Feedback",
       subtitle: "Udemy",
       fontAwesomeClassname: "simple-icons:udemy",
@@ -442,7 +478,7 @@ const certifications = {
 const experience = {
   title: "Experience",
   subtitle: "Work, Internship and Volunteership",
-  description: "I approach every role as an opportunity to understand the entire system—from technical architecture to business impact. Through my journey across startups and enterprises, I've learned to build not just scalable technology, but privacy-conscious solutions that enable teams and drive product success. Each experience has strengthened my ability to take ownership, solve complex problems with security at the forefront, and create lasting value while protecting user data",
+  description: "I approach every role as an opportunity to understand the entire system; from technical architecture to business impact. Through my journey across startups and enterprises, I've learned to build not just scalable technology, but privacy-conscious solutions that enable teams and drive product success. Each experience has strengthened my ability to take ownership, solve complex problems with security at the forefront, and create lasting value while protecting user data",
   header_image_path: "experience.svg",
   sections: [
     {
@@ -454,9 +490,10 @@ const experience = {
           company: "Cloudera",
           company_url: "https://www.cloudera.com/",
           logo_path: "cloudera_logo.webp",
+          duration: "Feb 2025 - Present",
           location: "Bangalore, India",
           description:
-            "• Built secure API exposure layer using Istio gateways, auth policies, and Apache Knox for authenticated access to Helm-deployed applications\n• Integrated Cadence with Spring Boot microservices for long-running workflow orchestration with full retry and failure handling\n• Refactored internal Helm deployment into a parameterized Go library, integrated with Vault, and wrapped it for Java-based services",
+            "• Owned end-to-end design and delivery of suspend/resume capability for applications. Achieved over 95% reduction in idle infrastructure costs through automated DB snapshots, graceful shutdown, RBAC checks, and K8s node scaling.\n• Architected and delivered an enterprise API security layer, leveraging Istio, custom K8s operators, and Knox. Secured critical endpoints across public and private clouds, and enforced authorisation.\n• Containerized and decoupled Apache Atlas from VM-based SDX stacks, enabling portable, independently scalable deployment on any K8s infrastructure backed by dedicated Postgres, Kafka, and Solr.\n• Standardized company-wide Spring Boot integration for Cadence, bridging framework gaps with custom ApplicationContext injection, adopted by 8+ services to build distributed workflows with externalized configuration and automated failure handling.\n• Developed the Functional Test Framework for a greenfield service (Appfactory) using GenAI which runs on a daily cadence for various control planes. This reduced compatibility regressions and new bugs by 30%+ and ensured continuous development while maintaining product stability and enhancing developer productivity.",
           color: "#FF6900",
         },
         {
@@ -467,7 +504,7 @@ const experience = {
           duration: "Aug 2023 - Feb 2025",
           location: "Bangalore, India",
           description:
-            "• Built a common-API wrapper to extend data-lake capabilities to existing services; drove its adoption across multiple teams.\n• Created a Start/Stop Datalake API using Cadence for async orchestration of multi-service workflows.\n• Extended Hibernate schema for soft deletes, with Cadence-based cleanup orchestration for fault tolerance.\n• Developed utility commands like describe datalake and describe services to enhance data observability for tools like Ranger, Atlas, and Kafka.",
+            "• Implemented start/stop lifecycle controls for large data lakes, leveraging Cadence to orchestrate long-running workflows across compute, storage and control-plane services.\n• Redesigned a metadata API to eliminate hardcoded values in favor of a dynamic, provider-agnostic model that downstream services can extend with ease.\n• Engineered a common-API wrapper service to seamlessly layer containerized data-lake support onto existing endpoints, auto-detecting variants and enabling adoption with a simple endpoint switch—no code changes required.\n• Led the common-API wrapper rollout across three data-services teams, coordinating with engineers, QA, and management to triage regressions and deliver API-side fixes for a seamless, disruption-free integration.\n• Enhanced the Ranger Admin Datalake service with multi-database support, integrating Amazon RDS for enterprise customers and a Kubernetes-hosted in-cluster database for lightweight deployments.",
           color: "#FF6900",
         },
       ],
@@ -483,18 +520,18 @@ const experience = {
           duration: "Jan 2023 - Aug 2023",
           location: "Bangalore, India",
           description:
-            "• Built centralized dashboard for multi-cloud Kubernetes environments, integrating with Kubernetes API and Prometheus for unified monitoring and management\n• Developed full-stack solution using Spring MVC backend with gRPC endpoints and React frontend, delivering intuitive interface for infrastructure management",
+            "• Developed unified Kubernetes management platform for SaaS datalakes across EKS, GKE, AKS, reducing ops time by merging kubectl and cloud console workflows in an SSO-secured web UI with Prometheus-based monitoring.\n• Designed and implemented backend via Spring MVC, exposing gRPC endpoints for control logic and real-time infrastructure metrics.\n• Built intuitive front-end dashboard using Figma (wireframing) and ReactJS, middleware using Python Flask, resulting in clear user flows and streamlined experiences.",
           color: "#FF6900",
         },
         {
-          title: "Cloud DevOps Intern",
+          title: "Software Development and Cloud Intern",
           company: "X80-Security",
           company_url: "https://x80security.com/",
           logo_path: "x80_logo.jpg",
-          duration: "Sep 2021 - Jan 2023",
+          duration: "Sep 2021 - Dec 2022",
           location: "Paris (Remote)",
           description:
-            "• Built automated vulnerability scanners for AWS/GCP VPCs and Heroku, reducing security breaches by 30% while ensuring client privacy\n• Created AppSmith dashboard for real-time cloud statistics and vulnerability tracking; implemented comprehensive unit tests with mocked API responses",
+            "• Engineered cloud vulnerability scanning platform for 10+ clients—reduced breaches by 30% by detecting misconfigs, vulnerable dependencies, machine images/containers across GCP, AWS, Heroku.\n• Built graph-modeled UI and API for client environments, visualizing security status and enabling fast queries.\n• Developed automation for Heroku VPC scanning and alerts, ensured privacy by fully automating detection & reporting.\n• Built interactive dashboards via AppSmith, showing real-time stats of cloud health and vulnerabilities.\n• Collected GitHub org metadata and Dependabot alerts, integrated insights into company's knowledge graph for vulnerabilities.",
           color: "#1E3A8A",
         },
         {
@@ -532,7 +569,7 @@ const experience = {
           duration: "May 2021 - Sep 2022",
           location: "Manipal, India",
           description:
-            "• Implemented object detection using PCL (Point Cloud Library) for accurate and efficient detection of objects within the environment\n• Developed advanced algorithms to analyze multiple parameters and determine the best parking spots, optimizing factors such as distance, availability, and convenience\n• Leveraged the gathered data to generate intelligent insights, enabling effective decision-making and efficient utilization of parking spaces",
+            "• Implemented object detection using PCL (Point Cloud Library) on LIDAR data for accurate and efficient detection of objects within the environment\n• Developed advanced algorithms to analyze multiple parameters and determine the best parking spots, optimizing factors such as distance, availability, and convenience\n• Leveraged the gathered data to generate intelligent insights, enabling effective decision-making and efficient utilization of parking spaces",
           color: "#FF6900",
         },
         {
@@ -544,7 +581,7 @@ const experience = {
           duration: "May 2020 - Sep 2022",
           location: "Manipal, India",
           description:
-            "• Built a sentiment analysis system with face tracking and image classification to assess crowd emotions in real-time, enabling contextual insights for public event monitoring\n• Collaborated with KMC Manipal doctors to develop an image segmentation prototype for dental plaque detection, quantifying plaque percentage on teeth from clinical images\n• Demonstrated potential for AI-assisted diagnosis through visual analysis, laying the groundwork for future tools to support dental screening workflows",
+            "• Built a sentiment analysis system with face tracking and image classification to assess crowd emotions in real-time, enabling contextual insights for public event monitoring\n• Collaborated with KMC Manipal doctors to develop an image segmentation prototype(FCN32 & UNET) for dental plaque detection, quantifying plaque percentage on teeth from clinical images\n• Demonstrated potential for AI-assisted diagnosis through visual analysis, laying the groundwork for future tools to support dental screening workflows",
           color: "#FF6900",
         },
       ],
@@ -619,40 +656,7 @@ const blogSection = {
   title: "My Blogs",
   subtitle:
     "I write about backend development, cloud infrastructure, and the challenges of building scalable systems.",
-  blogs: [
-    {
-      url: "https://github.com/Kaustav-Sarkar", // Replace with actual blog URL
-      title: "Building Scalable APIs with Cadence Workflow Engine",
-      description:
-        "Learn how I integrated Uber's Cadence workflow engine with Spring Boot microservices to handle long-running operations with built-in retry mechanisms and failure recovery.",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1200/1*5gJzummAqpBDGATo0fjU6Q.jpeg", // Placeholder image
-    },
-    {
-      url: "https://github.com/Kaustav-Sarkar", // Replace with actual blog URL
-      title: "From Monolith to Microservices: A Kubernetes Journey",
-      description:
-        "My experience migrating legacy applications to containerized microservices on Kubernetes, including challenges faced and lessons learned along the way.",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1200/1*KkME3gZPg4f6xBymvLkbRg.png", // Placeholder image
-    },
-    {
-      url: "https://github.com/Kaustav-Sarkar", // Replace with actual blog URL
-      title: "Implementing Soft Deletes with Hibernate and Cadence",
-      description:
-        "How I extended Hibernate schema to support soft deletes with automated cleanup orchestration using Cadence for fault-tolerant data management.",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1200/1*vHHBwcUFUaHWXntSnqKdCA.png", // Placeholder image
-    },
-    {
-      url: "https://github.com/Kaustav-Sarkar", // Replace with actual blog URL
-      title: "Building CLI Tools for Better Developer Experience",
-      description:
-        "Creating utility commands like 'describe datalake' to enhance data observability and simplify interaction with complex distributed systems.",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1200/1*BsZNI3YkQBwx8lu7UbBwVg.png", // Placeholder image
-    },
-  ],
+  blogs: [],
 };
 
 // Testimonials
@@ -665,7 +669,7 @@ const testimonials = {
       name: "Edoardo Barp",
       role: "CTO of X80 Security",
       company: "X80 Security",
-      image: "", // Using placeholder
+      image: "", // Using placeholder didn't wanna download their linkedin profile pics
       text:
         "Kaustav was a very good element of the development team. I was his direct manager for more than a year, during which he proved capable of taking ownership of complex and multi-faceted problems, stretching from software development to cloud infrastructure and automated development. I highly recommend him as I believe he would be a great addition to any development team.",
       linkedin: "https://linkedin.com/in/edoardobarp",
